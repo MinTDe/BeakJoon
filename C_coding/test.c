@@ -7,10 +7,10 @@ int main(void){
 
   for(i = 1; i <= n ;i++){
     for(j = 1; j <= n * 2; j++){
-      if(j <= i)
+      if(j <= i || j > n * 2 - i)
         printf("*");
-      else if(j > n * 2 - i)
-        printf("*");
+      // else if(j > n * 2 - i)
+      //   printf("*");
       else
         printf(" ");
     }
@@ -18,10 +18,10 @@ int main(void){
   }
   for(i = n - 1; i >= 1;i--){
     for(j = 1; j <= n*2; j++){
-      if(j <= i)
+      if(j <= i || j > n * 2 - i)
         printf("*");
-      else if(j > n * 2 - i)
-        printf("*");
+      // else if(j > n * 2 - i)
+      //   printf("*");
       else
         printf(" ");
     }
