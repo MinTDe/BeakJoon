@@ -1,31 +1,29 @@
 #include <stdio.h>
 
 int main(void){
-  int i,j,n;
+  char str1[100], str2[100], str[200];
+  int i=0, j=0;
 
-  scanf("%d", &n);
+  printf("Input 1st string: ");
+  fflush(stdout);
+  gets(str1);
 
-  for(i = 1; i <= n ;i++){
-    for(j = 1; j <= n * 2; j++){
-      if(j <= i || j > n * 2 - i)
-        printf("*");
-      // else if(j > n * 2 - i)
-      //   printf("*");
-      else
-        printf(" ");
-    }
-    printf("\n");
+  printf("Input 2nd string: ");
+  fflush(stdout);
+  gets(str2);
+
+  while(str1[i] != '\0'){
+    str[i] = str1[i];
+    i++;
   }
-  for(i = n - 1; i >= 1;i--){
-    for(j = 1; j <= n*2; j++){
-      if(j <= i || j > n * 2 - i)
-        printf("*");
-      // else if(j > n * 2 - i)
-      //   printf("*");
-      else
-        printf(" ");
-    }
-    printf("\n");
+  while(str2[j] != '\0'){
+    str[i] = str2[j];
+    i++;
+    j++;
   }
+
+  printf("%s", str);
+
   return 0;
+
 }
